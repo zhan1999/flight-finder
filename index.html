@@ -3,8 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>tickets</title>
+	<meta name="description" content="Flight finder">
+	<title>Where to now, St. Peter?</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	<!-- <script src="data.js"></script> -->
 </head>
 <body>
@@ -16,27 +18,27 @@
 	<h2>Searching this year flights only. Press "Search" to display all flights or enter parameters to filter.</h2>
 	<hr>
 	<form id="searchForm" class="search-form">
-		<div class="departure"><label for="departure">Departure from:</label></div>
-		<div class="arrival"><label for="arrival">Arrival to:</label></div>
-		<div class="pax"><label for="pax">No of passengers:</label></div>
+		<div class="departure"><label for="departure-select">Departure from:</label></div>
+		<div class="arrival"><label for="arrival-select">Arrival to:</label></div>
+		<div class="pax"><label for="pax-input">No of passengers:</label></div>
 		<div class="first"><label for="firstDate">From date:</label></div>
 		<div class="last"><label for="lastDate">Till date:</label></div>
 		<div class="search"></div>
 
 		<div class="departure-select">
-		<select id="departure" name="departure">
+		<select id="departure-select" name="departure">
 			<option value="any">any</option>
 		</select>
 		</div>
 		<!-- <br /><br /> -->
 		<div class="arrival-select">
-		<select id="arrival" name="arrival">
+		<select id="arrival-select" name="arrival">
 			<option value="any">any</option>
 		</select>
 		</div>
 		<!-- <br /><br /> -->
 		<div class="pax-input">
-		<input type="text"  name="pax">
+		<input type="text"  name="pax" id="pax-input">
 		</div>
 		<!-- <br /><br /> -->
 		<div class="first-input">
@@ -63,7 +65,7 @@
 </div>
 
 <div class="table-container" id="result-table">
-	<div class="total-found">Found <span id="total-found"> </span>flights:</div>
+	<div class="total-found">Found <span id="total-found"></span>flights:</div>
 	<table class="rt">
 	<thead>
 		<tr>
