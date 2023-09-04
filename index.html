@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>tickets</title>
+	<link rel="stylesheet" href="style.css">
+	<!-- <script src="data.js"></script> -->
+</head>
+<body>
+
+<div class="container">
+
+<div class="form-container">
+	<h1>Where to and when are you flying?</h1>
+	<h2>Searching this year flights only. Press "Search" to display all flights or enter parameters to filter.</h2>
+	<hr>
+	<form id="searchForm" class="search-form">
+		<div class="departure"><label for="departure">Departure from:</label></div>
+		<div class="arrival"><label for="arrival">Arrival to:</label></div>
+		<div class="pax"><label for="pax">No of passengers:</label></div>
+		<div class="first"><label for="firstDate">From date:</label></div>
+		<div class="last"><label for="lastDate">Till date:</label></div>
+		<div class="search"></div>
+
+		<div class="departure-select">
+		<select id="departure" name="departure">
+			<option value="any">any</option>
+		</select>
+		</div>
+		<!-- <br /><br /> -->
+		<div class="arrival-select">
+		<select id="arrival" name="arrival">
+			<option value="any">any</option>
+		</select>
+		</div>
+		<!-- <br /><br /> -->
+		<div class="pax-input">
+		<input type="text"  name="pax">
+		</div>
+		<!-- <br /><br /> -->
+		<div class="first-input">
+		<input type="date"  name="firstDate" id="firstDate" value="2023-01-01">
+		</div>
+		<!-- <br /><br /> -->
+		<div class="last-input">
+		<input type="date" name="lastDate" id="lastDate" value="2023-12-31">
+		</div>
+		<!-- <br /><br /> -->
+		<div class="search">
+		<button type="submit">Search</button>
+		<!-- <button type="reset">Reset</button> -->
+		</div>
+	</form>
+	<hr/>
+</div>
+
+<div id = "sorter-container">
+	Sort results by:&nbsp;
+	<select name="sorter" id="sorter">
+		<option value="unsorted">Unsorted</option>
+	</select>
+</div>
+
+<div class="table-container" id="result-table">
+	<div class="total-found">Found <span id="total-found"> </span>flights:</div>
+	<table class="rt">
+	<thead>
+		<tr>
+			<th><button id="departure">Departure airport</button></th>
+			<th><button id="arrival">Arrival airport</button></th>
+			<th><button id="pax">Available tickets</button></th>
+			<th><button id="price">Ticket price</button></th>
+			<th><button id="date">Date of departure</button></th>
+		</tr>
+	</thead>
+	<tbody id="table-content"></tbody>
+	</table>
+</div>
+
+<h3>Expand your horizons!</h3>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
+
